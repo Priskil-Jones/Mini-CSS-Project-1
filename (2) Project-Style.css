@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_box {
+    background: url(Camera.jpg);
+    height: 100vh;
+    /* vh = viewport, it is used to set height as the screen of laptop/computer/etc... */
+    background-size: cover;
+}
+
+.open_btn i {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.3s linear 0s;
+}
+
+
+.sidebar_menu {
+    position: fixed;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+
+    /* transition / type of animation */
+    transition: all 0.3s linear 0s;
+}
+
+.sidebar_menu .logo {
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
+    height: 60px;
+    /* We set height, because height = 0 because nothing was written in <div class=logo> </div>. Except <a> tag was wriiten */
+}
+
+.sidebar_menu .logo a {
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sidebar_menu .close_btn i{
+    color: grey;
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute;
+    left: 275px;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.3s linear 0s;
+}
+
+.sidebar_menu .menu {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.sidebar_menu .menu li {
+    margin-top: 6px;
+    padding: 14px 20px;
+    /* Top/Bottom: 10px   and   Right/Left: 20px */
+}
+
+.sidebar_menu .menu li i,a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu a {
+    padding-left: 8px;
+}
+
+.sidebar_menu .social_media {
+    position: absolute;
+    left: 25%;
+    /* Or left: 75px    Whichever you want can write */
+    bottom: 50px;
+    /* Bottom means niche(horizontal line) se 40px space deke uper lana. */
+}
+
+.sidebar_menu .social_media i {
+    color: white;
+    opacity: 0.5;
+    padding: 0px 5px;
+}
+
+#check {
+    display: none;
+    /* Item disappears */
+    /* Also, the space it occupied is gone. So other boxes moves */
+}
+
+.sidebar_menu .menu li:hover {
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+}
+
+.open_btn:hover i {
+    font-size: 40px
+}
+
+.close_btn:hover i {
+    font-size: 30px;
+}
+
+.sidebar_menu .social_media i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+
+#check:checked ~ .open_btn i {
+    display: none;
+    /* You can aslo use:  "opacity: 0" */
+}
+
+#check:checked ~ .sidebar_menu .close_btn i {
+    opacity: 1;
+}
+
