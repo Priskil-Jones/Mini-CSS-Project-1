@@ -17,4 +17,4 @@ A mini front-end project built using HTML and CSS.
 This project was created for CSS practice. Navigation buttons and links are for design demonstration and are not functional because no JavaScript has been added.
 
 ## Preview
-![Project Screenshot] (Preview Screenshot-1.png)
+![Project Screenshot](Preview Screenshot-1.png)
